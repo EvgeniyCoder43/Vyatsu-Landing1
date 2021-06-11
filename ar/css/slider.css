@@ -1,0 +1,218 @@
+/* Собственно сам слайдер */
+.slider{
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+    height: 300px;
+    margin-bottom: 15px;
+}
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 175%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .prev{
+    left: 40%;
+}
+.slider .next {
+    right: 40%;
+    border-radius: 3px 0 0 3px;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+.slider .prev:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Анимация слайдов */
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.sliderPlace{
+    display: flex;
+    justify-content: center;
+}
+.item{
+    width: 59.14vw;
+}
+.itemHeader{
+    display: flex;
+}
+.лицо{
+    height: 14.9vh;
+    margin-top: 2vh;
+    margin-right: 1.6vw;
+}
+.имя{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 5.6vh;
+    color: #484848;
+    margin: 0;
+    padding: 0;
+}
+.страна{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.8vh;
+    line-height: 100%;
+    /* identical to box height, or 18px */
+    color: #484848;
+    margin: 0;
+    padding: 0;
+}
+.данные{
+    margin: 0;
+    padding: 0;
+    height: 14.9vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.факультет{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.8vh;
+    line-height: 100%;
+    color: #3A75FF;
+    margin-top: 2vh;
+}
+.ItemP{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.8vh;
+    line-height: 170%;
+    /* or 31px */
+    text-align: justify;
+    color: #000000;
+    margin-top: 3.7vh;
+}
+@media screen and (max-width: 900px){
+    .slider{
+        width: 100vw;
+        margin: 0 ;
+    }
+    .itemHeader{
+        display: flex;
+        width: 90vw;
+    }
+    .лицо{
+        height: 14.9vh;
+        margin-top: 2vh;
+        margin-right: 1.6vw;
+    }
+    .имя{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 3vh;
+        color: #484848;
+        margin: 0;
+        padding: 0;
+    }
+    .страна{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.8vh;
+        line-height: 100%;
+        /* identical to box height, or 18px */
+        color: #484848;
+        margin: 0;
+        padding: 0;
+    }
+    .данные{
+        margin-top: 1.3vh;
+        padding: 0;
+        height: 14.9vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .факультет{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.8vh;
+        line-height: 100%;
+        color: #3A75FF;
+        margin-top: 2vh;
+    }
+    .item{
+        width: 100%;
+    }
+    .ItemP{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.8vh;
+        line-height: 170%;
+        /* or 31px */
+        text-align: justify;
+        color: #000000;
+        margin-top: 3.7vh;
+        width: 100%;
+    }
+    .slider .prev, .slider .next {
+        cursor: pointer;
+        position: static;
+        top: 0;
+        top: 350%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+    }
+    .slider .prev{
+    left: 20%;
+    }
+    .slider .next {
+        right:20%;
+        border-radius: 3px 0 0 3px;
+    }
+    .buttonPrev{
+        display: flex;
+        justify-content: center;
+    }
+    .section14{
+        margin-top: 90vh;
+    }
+}
